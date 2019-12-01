@@ -11,6 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'api\controllers',
+    'modules' => [
+        'v1' => [
+            'class' => 'api\modules\v1\Module',
+        ],
+    ],
     'components' => [
         'request' => [
             'enableCsrfValidation' => false,
