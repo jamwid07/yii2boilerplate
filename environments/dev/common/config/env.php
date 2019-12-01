@@ -5,5 +5,5 @@
  * @created: 30-Nov-19
  */
 
-$dotenv = new \Dotenv\Dotenv(dirname(dirname(__DIR__)));
+$dotenv = \Dotenv\Dotenv::create(dirname(__DIR__, 2));
 $dotenv->load();
