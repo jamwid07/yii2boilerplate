@@ -24,11 +24,12 @@ services:
 
   mysql:
     image: mysql:5.7
+    env_file: .env
     environment:
-      - MYSQL_ROOT_PASSWORD=verysecret
-      - MYSQL_DATABASE=yii2advanced
-      - MYSQL_USER=yii2advanced
-      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=${DB_PASS}
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
 
   #pgsql:
   #  image: postgres:9.5
